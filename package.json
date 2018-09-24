@@ -1,11 +1,16 @@
 {
-  "name": "gh-exporter",
+  "name": "github-exporter",
   "version": "0.1.0",
   "description": "Github exporter for prometheus",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "author": "Steven Natera",
-  "license": "MIT"
+  "author": "Steven Natera <tektekpush@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/rest": "^15.12.0",
+    "express": "^4.16.3",
+    "prom-client": "^11.1.3"
+  }
 }

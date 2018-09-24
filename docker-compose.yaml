@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+
+  exporter:
+    build: .
+    container_name: github-exporter
+    tty: true
+    stdin_open: true
+    expose:
+      - 5001
+    ports:
+      - 5001:5001
+    environment:
+      - REPO=gatsbyjs/gatsby
+      - GITHUB_TOKEN=your_github_personal_access_token
